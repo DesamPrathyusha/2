@@ -112,33 +112,6 @@ function explode(){
     requestAnimationFrame(explode);
 }
 
-function monthDifference(date1, date2) {
-    let months;
-    months = (date2.getFullYear() - date1.getFullYear()) * 12;
-    months -= date1.getMonth();
-    months += date2.getMonth();
-    return months <= 0 ? 0 : months;
-}
-
-function updateMonthCount() {
-    const startDate = new Date("18/02/2024");
-    const currentDate = new Date();
-    let monthCount = 0;
-
-    if (currentDate.getDate() >= startDate.getDate()) {
-        monthCount = monthDifference(startDate, currentDate);
-    } else {
-        // if currentDate.getDate() is less than startDate.getDate(), calculate the months till previous month
-        const prevMonthDate = new Date(currentDate);
-        prevMonthDate.setMonth(prevMonthDate.getMonth() - 1);
-        monthCount = monthDifference(startDate, prevMonthDate);
-    }
-
-    document.getElementById('month').innerHTML = `${monthCount}`;
-}
-
-updateMonthCount();
-
 animate();
 heartAnimate();
 
