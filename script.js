@@ -121,7 +121,7 @@ function monthDifference(date1, date2) {
 }
 
 function updateMonthCount() {
-    const startDate = new Date("12/07/2022");
+    const startDate = new Date("18/02/2024");
     const currentDate = new Date();
     let monthCount = 0;
 
